@@ -1,0 +1,15 @@
+{
+  "name": "jeu-cyber",
+  "version": "1.0.0",
+  "description": "The default template for a Neutralinojs app. It's possible to use your favorite frontend framework by using [these steps](https://neutralino.js.org/docs/how-to/use-a-frontend-library).",
+  "mOain": "index.js",
+  "scripts": {
+    "dev": "neu run",
+    "bundleapp": "esbuild public/js/main.js --bundle --minify --outfile=public/js/bundle.js --watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "esbuild": "^0.20.2"
+  }
+}

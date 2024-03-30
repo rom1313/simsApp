@@ -1,0 +1,188 @@
+/* TODO                                         VARIABLE CSS    */
+:root {
+  --grisfonce: rgb(36, 36, 36);
+  --cuivre: rgb(255, 183, 124);
+  --marron: rgb(46, 15, 0);
+  --marronfonce: rgb(40, 11, 0);
+  --marronhud: rgb(53, 21, 0);
+  --borderhud: rgb(255, 183, 124);
+  --pointer: url("./img/mouse2.png"), pointer;
+  --pvcolor: rgb(0, 255, 38);
+}
+
+/* TODO                                         FONT   */
+@font-face {
+  font-family: "pixel";
+  src: url("./font/pixelex.ttf");
+}
+
+@font-face {
+  font-family: "pixel2";
+  src: url("./font/conthrax-sb.ttf");
+}
+
+/* TODO                                         ANIMATION   */
+@keyframes clignotement {
+  from {
+    opacity: 0.3;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+@keyframes apparition {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+@keyframes disparition {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+/* TODO                                         HTML / BODY    */
+
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  user-select: none;
+  background-color: rgb(153, 69, 0);
+  cursor: url("./img/mouse.png"), default;
+}
+
+body {
+  background-color: rgb(73, 73, 73);
+  overflow: hidden;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+img {
+  user-select: none;
+}
+#fenetre {
+  font-family: pixel;
+  background-color: rgb(0, 0, 0);
+  width: 100%;
+  height: 5vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  color: blueviolet;
+  flex-direction: row;
+  justify-content: end;
+  align-items: center;
+}
+.iconfenetre {
+  margin: 3vw;
+}
+#minimize {
+  font-size: 13vw;
+  cursor: url("./img/mouse2.png"), pointer;
+  -webkit-app-region: no-drag;
+  position: absolute;
+  top: -4.8%;
+  left: 79%;
+  z-index: 2;
+  color: rgb(231, 112, 0);
+}
+#close {
+  position: fixed;
+  border-radius: 100%;
+  width: 5px;
+  height: 5px;
+  background-color: rgb(231, 112, 0);
+  top: -0.8%;
+  left: 88%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4.5px;
+}
+#croix {
+  font-family: monospace;
+  font-weight: 900;
+  font-size: 12px;
+  position: fixed;
+  top: -1.8%;
+  filter: drop-shadow(0px 0px 3px orange);
+}
+#block {
+  background-color: rgb(39, 39, 39);
+  padding: 5px;
+  width: 80vw;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: scroll;
+  border-radius: 15px;
+  box-shadow: 0px 0px 10px black inset;
+}
+
+button {
+  cursor: url("./img/mouse2.png"), pointer;
+  width: 14vw;
+  border-radius: 10px;
+  background-color: black;
+  color: burlywood;
+  display: flex;
+  justify-content: center;
+  font-size: 10px;
+  background-color: rgb(26, 26, 26);
+}
+
+::-webkit-scrollbar {
+  opacity: 0;
+  width: 0px;
+  padding: 0;
+  margin: 0;
+}
+::-webkit-scrollbar-track {
+  background: var(--marronfonce);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--cuivre);
+}
+
+.blockcheat {
+  word-break: break-all;
+  padding: 5px;
+  font-weight: 700;
+  font-size: 10px;
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+  background-color: rgb(0, 0, 0);
+  box-shadow: 0px 0px 7px black;
+  width: 50vw;
+  height: fit-content;
+  border-top-left-radius: 35px;
+  border-bottom-right-radius: 35px;
+  row-gap: 5px;
+  align-items: center;
+  font-family: "Arial Narrow Bold", sans-serif;
+}
+.blockcheat > p {
+  margin: 0;
+  padding: 0;
+  color: rgb(0, 180, 171);
+}
